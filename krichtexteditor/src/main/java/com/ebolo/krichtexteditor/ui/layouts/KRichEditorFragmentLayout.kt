@@ -565,41 +565,41 @@ class KRichEditorFragmentLayout : AnkoComponent<KRichEditorFragment> {
                                 )
 
                                 // Sixth box: insert buttonsLayout - image, link, table, code
-                                verticalLayout {
-                                    backgroundColorResource = R.color.white
-                                    padding = dip(16)
-                                    isBaselineAligned = false
-
-                                    textView(R.string.font_insert) {
-                                        textSize = 10f
-                                    }.lparams(width = matchParent)
-
-                                    linearLayout {
-                                        backgroundResource = R.drawable.round_rectangle_white
-                                        gravity = Gravity.CENTER
-                                        padding = dip(8)
-
-                                        fun insertButton(@EditorButton.Companion.ActionType type: Int, drawable: Int) =
-                                                themedImageView(
-                                                        drawable,
-                                                        R.style.ActionImageView
-                                                ) {
-                                                    this.id = id
-                                                    backgroundResource = R.drawable.btn_white_material
-                                                    padding = dip(8)
-
-                                                    onClick { onMenuButtonClicked(type) }
-                                                }.lparams { weight = 1f }.apply { actionImageViewStyle() }
-
-                                        insertButton(CHECK, R.drawable.ic_format_list_check)
-                                        insertButton(IMAGE, R.drawable.ic_insert_photo)
-                                        menuFormatButtons.put(LINK, insertButton(LINK, R.drawable.ic_insert_link))
-                                        // insertButton(R.drawable.ic_table, R.id.iv_action_table)
-                                        insertButton(CODE_VIEW, R.drawable.ic_code_review)
-
-                                    }.lparams(width = matchParent, height = wrapContent) { topMargin = dip(8) }
-
-                                }.lparams(width = matchParent, height = wrapContent) { topMargin = dip(8) }
+//                                verticalLayout {
+//                                    backgroundColorResource = R.color.white
+//                                    padding = dip(16)
+//                                    isBaselineAligned = false
+//
+//                                    textView(R.string.font_insert) {
+//                                        textSize = 10f
+//                                    }.lparams(width = matchParent)
+//
+//                                    linearLayout {
+//                                        backgroundResource = R.drawable.round_rectangle_white
+//                                        gravity = Gravity.CENTER
+//                                        padding = dip(8)
+//
+//                                        fun insertButton(@EditorButton.Companion.ActionType type: Int, drawable: Int) =
+//                                                themedImageView(
+//                                                        drawable,
+//                                                        R.style.ActionImageView
+//                                                ) {
+//                                                    this.id = id
+//                                                    backgroundResource = R.drawable.btn_white_material
+//                                                    padding = dip(8)
+//
+//                                                    onClick { onMenuButtonClicked(type) }
+//                                                }.lparams { weight = 1f }.apply { actionImageViewStyle() }
+//
+//                                        insertButton(CHECK, R.drawable.ic_format_list_check)
+//                                        insertButton(IMAGE, R.drawable.ic_insert_photo)
+//                                        menuFormatButtons.put(LINK, insertButton(LINK, R.drawable.ic_insert_link))
+//                                        // insertButton(R.drawable.ic_table, R.id.iv_action_table)
+//                                        insertButton(CODE_VIEW, R.drawable.ic_code_review)
+//
+//                                    }.lparams(width = matchParent, height = wrapContent) { topMargin = dip(8) }
+//
+//                                }.lparams(width = matchParent, height = wrapContent) { topMargin = dip(8) }
 
                             }.lparams(width = matchParent, height = wrapContent)
 
